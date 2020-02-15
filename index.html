@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+
+    <body>
+         <form>
+            <fieldset class="space">
+        <legend>Usuário</legend>
+        <div></div>
+        <label>Email:</label>
+        <input type="email" placeholder="example@example.com"> <!--Placeholder usei para uma "dica" na caixa de diálogo-->
+    </div>
+    <div>
+        <label>Senha:</label>
+        <input type="password"> <!--type pode auxiliar nas entradas-->
+    </div>
+            </fieldset>
+
+            <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div>
+            <label>Data de Nascimento:</label>
+            <input type="date">
+        </div>
+        <div>
+            <label>Sexo</label>
+            <input type="radio" value="masculino" name="sexo" checked> <!--uso do checked para vir marcado como padrão-->
+            <label>Masculino</label>
+            <input type="radio" value="feminino" name="sexo"> <!--uso do name significa que ambas as opções pertencem ao mesmo grupo-->
+        </div>
+        <div>
+            <label>Estado:</label>
+            <select> <!--pesquisar sobre essa tag, e fieldset-->
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espírito Santo</option>
+              </select>
+        </div>
+        <div>
+            <label>Enviar Arquivo:</label>
+            <input type="file" accept="image/*">
+        </div>
+            </fieldset>
+
+            <fieldset>
+        <legend>PLUS++</legend>
+        
+    <div>
+        <label>Dúvidas:</label>
+        <textarea></textarea>
+    </div>
+    <div>
+        <label>Receber emails?</label>
+        <input type="checkbox"> <!--esse id é o mesmo que usamos para class? na estilização, 
+                                        ou é só um referencial da identidade dessa checkbox?-->
+    </div>
+            </fieldset>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+  
+         </form>    
+    </body>
+</html>
