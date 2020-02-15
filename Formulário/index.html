@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--Em caso de erros, ou dúvidas, abra uma issue, ou entre em contato pelo email: _weslley@ufpi.edu.br-->
+<!--O CSS serviu apenas para dar uma cara melhor, mas o foco é no formulário-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Weslley Aquinno">
+    <meta name="description" content="Criação de formulários em HTML">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+    <form action="http://arquivo.devmedia.com.br/projeto/requisicao.php" method="get">
+        <!--Para fazer a requisição ao servidor de testes, usei o endereço fornecido pela DevMedia-->
+        <!--Para envio de dados para uma requisição, usar NAME nos campos para ser identificável-->
+        <!--Type irá servir tanto para auxiliar os campos de acordo com o seu uso, tanto para validações-->
+        <!--Entre os elementos de validação temos: Required, Minleght, Maxleght, Min, Max, Type-->
+        <!--Onde Required aponta que aquele campo é obrigatório, Max e Min são os valores máximo e mínimo, 
+            e Type em alguns casos obriga a utilizar o valor requerido, como no caso de Email, que se não
+            utilizar o @, o campo vai apresentar uma mensagem de erro, e no campo Number só aceita números-->
+        <!--Para saber mais sobre validação acesse: https://tableless.com.br/validacao-de-formularios-com-html5/-->
+        <fieldset class="space">
+            <legend>Usuário</legend>
+            <div></div>
+            <label>Email:</label>
+            <input type="email" placeholder="example@example.com" name="email" required>
+            <!--Placeholder usei para uma "dica" na caixa de diálogo-->
+            </div>
+            <div>
+                <label>Senha:</label>
+                <input type="password" name="senha" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label>Data de Nascimento:</label>
+                <input type="date" name="data-nascimento" required>
+            </div>
+            <div>
+                <label>Sexo</label>
+                <input type="radio" value="masculino" name="sexo" checked>
+                <!--uso do checked para vir marcado como padrão-->
+                <label>Masculino</label>
+                <input type="radio" value="feminino" name="sexo" id="bit">
+                <!--uso do name significa que ambas as opções pertencem ao mesmo grupo-->
+            </div>
+            <div>
+                <label>Estado:</label>
+                <select name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div>
+                <label>Enviar Arquivo:</label>
+                <input type="file" accept="image/*" name="foto-perfil" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            <div>
+                <label>Rua:</label>
+                <input type="text" name="rua" id="rua">
+                <label>Nº:</label>
+                <input type="number" name="numero" id="numero-casa">
+            </div>
+            <div>
+                <label>Bairro:</label>
+                <input type="text" name="bairro" id="bairro">
+            </div>
+            <div>
+                <label>CEP:</label>
+                <input type="number" name="cep" id="cep" placeholder="00000-000">
+            </div>
+            <div>
+                <label>Telefone:</label>
+                <input type="number" name="telefone" id="telefone" placeholder="Ex: (99) 9 9999-9999" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>PLUS++</legend>
+
+            <div>
+                <label>Dúvidas:</label>
+                <textarea name="duvida"></textarea>
+            </div>
+            <div>
+                <label>Receber emails?</label>
+                <input type="checkbox" name="receber emails">
+            </div>
+        </fieldset>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+
+</html>

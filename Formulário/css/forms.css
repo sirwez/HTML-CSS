@@ -1,0 +1,35 @@
+input::placeholder {
+  text-align: center;
+}
+
+button,
+legend {
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: 0;
+  font-size: 14px;
+}
+
+button:hover {
+  color: #999;
+
+}
+
+button:focus {
+  color: #999;
+  position: relative;
+  margin: 1px;
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+.space {
+  margin: 5px;
+  padding: 15px;
+}
