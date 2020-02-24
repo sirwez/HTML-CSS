@@ -1,0 +1,17 @@
+/*vai gerar um icone de X ou de Acerto*/
+.icon-ok {
+color: #489D00;
+}
+.icon-ok::before {
+content: "\2714";
+font-family: 'IconicFill';
+margin-right: 10px;
+}
+.icon-invalid {
+color: #990000;
+}
+.icon-invalid::before {
+content: "\2718";
+font-family: 'IconicFill';
+margin-right: 10px;
+}
