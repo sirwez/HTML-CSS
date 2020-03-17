@@ -21,5 +21,4 @@
     @include border-stroke(medium);
   }  
 </style>
-
 <div id="box"></div>
